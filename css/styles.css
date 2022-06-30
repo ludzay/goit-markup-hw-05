@@ -149,8 +149,8 @@ h1, h2, h3, h4, h5, h6, p{
     line-height: 1.14;
     letter-spacing: 0.02em;
 
-    transition: color 250ms transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition: color 2500ms var(--title-text-color), transform 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
 
 .nav-link.current{
      position: relative;
@@ -182,7 +182,7 @@ h1, h2, h3, h4, h5, h6, p{
     letter-spacing: 0.02em;
     text-decoration: none;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--primaty-text-color) color 250ms cubic-bezier(0.4, 0, 0.2, 1), var(--primaty-text-color) fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -203,7 +203,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .site-nav .nav-link.current {
-    color:var(--accent-color);transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color:var(--accent-color) transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.current::after{
@@ -851,13 +851,11 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     text-decoration: none;
     position: relative;
 
-    
-
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-overley {
-    display: block;
+    display: inline-block;
     width: 370px;
     height: 294px;
     /* width: 100%;
@@ -878,8 +876,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
     
     display: none;
 
-    transform: translateY(100%);
-    transition: 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(-100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -891,7 +889,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 .link-portfolio:hover .text-overley {
     display:block;
     transform: translateY(0);
-    transition: 250ms, cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 
